@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Venue Directions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background: #fff8f0;
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: #b44;
+    }
+    .map-link, .ride-link {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
+      width: 90%;
+      max-width: 400px;
+      background-color: #f5f5f5;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .ride-link:hover {
+      background-color: #ffe6e6;
+    }
+  </style>
+</head>
+<body>
+  <h1>📍 Wedding Venue</h1>
+  <p><strong>Chennai Convention Centre</strong><br/>Vettuvankeni, Chennai</p>
+
+  <a class="map-link" href="https://www.google.com/maps?q=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank">
+    Open in Google Maps
+  </a>
+
+  <h2>🚖 Book Your Ride</h2>
+
+  <a class="ride-link" href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank">
+    Ride with Uber
+  </a>
+
+  <a class="ride-link" href="https://book.olacabs.com/?drop_lat=12.9431&drop_lng=80.2565" target="_blank">
+    Ride with Ola
+  </a>
+
+  <a class="ride-link" href="https://play.google.com/store/apps/details?id=com.rapido.passenger" target="_blank">
+    Open Rapido App
+  </a>
+
+  <a class="ride-link" href="https://play.google.com/store/apps/details?id=com.juspay.nammayatri" target="_blank">
+    Open Namma Yatri App
+  </a>
+</body>
+</html>
+
+
