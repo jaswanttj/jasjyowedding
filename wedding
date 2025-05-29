@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wedding Venue Directions</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap');
 
     * {
       margin: 0;
@@ -13,82 +13,84 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Montserrat', sans-serif;
-      background: #f9f9f9;
+    body, html {
+      height: 100%;
+      font-family: 'SF Pro Display', 'Helvetica Neue', sans-serif;
+      background-color: #f8f8f8;
       color: #111;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       padding: 20px;
     }
 
     .container {
-      background: #ffffffcc;
+      max-width: 460px;
+      width: 100%;
+      background: white;
       border-radius: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       padding: 40px 30px;
       text-align: center;
-      animation: fadeIn 1.2s ease forwards;
-      max-width: 420px;
-      width: 100%;
-      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease forwards;
     }
 
     h1 {
       font-weight: 700;
       font-size: 2.4rem;
-      color: #000;
+      color: #111;
       margin-bottom: 8px;
     }
 
     p.location {
-      font-size: 1.1rem;
-      color: #444;
-      margin-bottom: 24px;
+      font-size: 1rem;
+      margin-bottom: 28px;
+      color: #555;
     }
 
     a.button {
       display: block;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      padding: 14px;
-      margin: 12px 0;
-      font-size: 1rem;
+      margin: 15px auto;
+      padding: 14px 0;
+      width: 100%;
+      max-width: 380px;
       font-weight: 600;
-      transition: 0.3s ease;
+      font-size: 1.1rem;
+      color: white;
+      background: #007AFF;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
 
     a.button:hover {
-      background: #444;
+      background: #005FCC;
     }
 
     h2 {
+      margin-top: 40px;
+      font-weight: 600;
       font-size: 1.5rem;
-      color: #000;
-      margin-top: 30px;
+      color: #111;
     }
 
     @keyframes fadeIn {
-      0% {
+      from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
       .container {
         padding: 30px 20px;
+      }
+      h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -96,17 +98,15 @@
 <body>
   <div class="container">
     <h1>📍 Wedding Venue</h1>
-    <p class="location">
-      <strong>Chennai Convention Centre Marriage Hall</strong><br>
-      East Coast Road, First Avenue, Vettuvankeni, Chennai
-    </p>
+    <p class="location"><strong>Chennai Convention Centre</strong><br>Marriage Hall, East Coast Road, First Avenue, Vettuvankeni, Chennai</p>
 
-    <a class="button" href="https://www.google.com/maps?q=Chennai+Convention+Centre+Marriage+Hall,+East+Coast+Road,+First+Avenue,+Vettuvankeni,+Chennai" target="_blank" rel="noopener noreferrer">
+    <a class="button" href="https://www.google.com/maps/search/?api=1&query=12.934806535298414,80.25201690105419" target="_blank" rel="noopener noreferrer">
       Open in Google Maps
     </a>
 
     <h2>🚖 Book Your Ride</h2>
-    <a class="button" href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=12.943072&dropoff[longitude]=80.256477&dropoff[nickname]=Chennai%20Convention%20Centre%20Marriage%20Hall" target="_blank" rel="noopener noreferrer">
+
+    <a class="button" href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=12.934806535298414&dropoff[longitude]=80.25201690105419&dropoff[nickname]=Chennai%20Convention%20Centre" target="_blank" rel="noopener noreferrer">
       Ride with Uber
     </a>
   </div>
