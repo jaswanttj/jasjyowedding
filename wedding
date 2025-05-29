@@ -2,64 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wedding Venue Directions</title>
   <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
-      background: #fff8f0;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+      color: #3b1e1e;
       text-align: center;
+      padding: 2rem;
+      overflow-x: hidden;
+      animation: backgroundShift 20s ease infinite alternate;
     }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
     h1 {
-      color: #b44;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
     }
-    .map-link, .ride-link {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      width: 90%;
-      max-width: 400px;
-      background-color: #f5f5f5;
-      border: none;
-      border-radius: 8px;
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1.3s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    a {
+      display: inline-block;
+      margin: 0.5rem 0;
+      padding: 1rem 2rem;
+      max-width: 350px;
+      width: 90vw;
+      background: #fff;
+      color: #f8b500;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 15px rgba(248, 181, 0, 0.3);
       text-decoration: none;
-      color: #000;
-      font-size: 16px;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.6s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
     }
-    .ride-link:hover {
-      background-color: #ffe6e6;
+
+    a:hover {
+      background: #f8b500;
+      color: #fff;
+      box-shadow: 0 12px 20px rgba(248, 181, 0, 0.6);
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      margin: 2rem 0 1rem;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #5a3e3e;
+      animation: fadeInUp 1.9s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (min-width: 600px) {
+      a {
+        width: 350px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>📍 Wedding Venue</h1>
-  <p><strong>Chennai Convention Centre</strong><br/>Vettuvankeni, Chennai</p>
+  <p><strong>Chennai Convention Centre</strong><br />Vettuvankeni, Chennai</p>
 
-  <a class="map-link" href="https://www.google.com/maps?q=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank">
+  <a href="https://www.google.com/maps?q=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank" rel="noopener">
     Open in Google Maps
   </a>
 
   <h2>🚖 Book Your Ride</h2>
 
-  <a class="ride-link" href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank">
+  <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank" rel="noopener">
     Ride with Uber
   </a>
 
-  <a class="ride-link" href="https://book.olacabs.com/?drop_lat=12.9431&drop_lng=80.2565" target="_blank">
+  <a href="https://book.olacabs.com/?drop_lat=12.9431&drop_lng=80.2565" target="_blank" rel="noopener">
     Ride with Ola
   </a>
 
-  <a class="ride-link" href="https://play.google.com/store/apps/details?id=com.rapido.passenger" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.rapido.passenger" target="_blank" rel="noopener">
     Open Rapido App
   </a>
 
-  <a class="ride-link" href="https://play.google.com/store/apps/details?id=com.juspay.nammayatri" target="_blank">
+  <a href="https://play.google.com/store/apps/details?id=com.juspay.nammayatri" target="_blank" rel="noopener">
     Open Namma Yatri App
   </a>
 </body>
 </html>
-
-
