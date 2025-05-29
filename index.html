@@ -1,59 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wedding Venue Directions</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 40px 20px;
-      background: #fff8f0;
-      color: #333;
-      text-align: center;
-      min-height: 100vh;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      padding: 20px;
+      perspective: 1000px;
     }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px 30px;
+      text-align: center;
+      animation: fadeInUp 1s ease forwards;
+      transform-style: preserve-3d;
+    }
+
     h1 {
-      color: #b44;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #ff6f61;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 10px rgba(255 111 97 / 0.7);
     }
-    p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
+
+    p.location {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
     }
-    .ride-link {
-      display: inline-block;
-      padding: 16px 40px;
-      background-color: #1fbad6;
-      color: white;
-      font-size: 1.25rem;
-      border-radius: 10px;
+
+    a.button {
+      display: block;
+      margin: 15px auto;
+      padding: 14px 0;
+      width: 100%;
+      max-width: 380px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #fff;
+      background: rgba(255 255 255 / 0.25);
+      border-radius: 14px;
+      border: 2px solid transparent;
+      box-shadow: 0 4px 15px rgba(255 111 97 / 0.6);
       text-decoration: none;
-      box-shadow: 0 6px 12px rgba(27, 186, 214, 0.4);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      cursor: pointer;
+      user-select: none;
     }
-    .ride-link:hover,
-    .ride-link:focus {
-      background-color: #139ab8;
-      box-shadow: 0 8px 16px rgba(19, 154, 184, 0.6);
+
+    a.button:hover {
+      background: rgba(255 111 97 / 0.9);
+      border-color: #ff6f61;
+      box-shadow: 0 6px 25px rgba(255 111 97 / 0.9);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #ff6f61;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 8px rgba(255 111 97 / 0.7);
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) perspective(1000px) rotateX(10deg);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) perspective(1000px) rotateX(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+        max-width: 90vw;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      a.button {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📍 Wedding Venue</h1>
-  <p><strong>Chennai Convention Centre</strong><br />Vettuvankeni, Chennai</p>
-  
-  <a
-    class="ride-link"
-    href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=Chennai+Convention+Centre,+Vettuvankeni,+Chennai"
-    target="_blank"
-    rel="noopener"
-  >
-    Ride with Uber
-  </a>
+  <div class="container">
+    <h1>📍 Wedding Venue</h1>
+    <p class="location"><strong>Chennai Convention Centre</strong><br>Vettuvankeni, Chennai</p>
+
+    <a class="button" href="https://www.google.com/maps?q=Chennai+Convention+Centre,+Vettuvankeni,+Chennai" target="_blank" rel="noopener noreferrer">
+      Open in Google Maps
+    </a>
+
+    <h2>🚖 Book Your Ride</h2>
+
+    <a class="button" href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=12.9431&dropoff[longitude]=80.2565&dropoff[nickname]=Chennai%20Convention%20Centre" target="_blank" rel="noopener noreferrer">
+      Ride with Uber
+    </a>
+  </div>
 </body>
 </html>
+
+
